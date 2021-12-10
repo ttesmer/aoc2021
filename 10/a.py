@@ -13,7 +13,7 @@ from collections import Counter, deque, defaultdict
 from advent import *
 
 def solve(o):
-    """Part 1."""
+    """Part 2."""
 
     res = 0
     xs = []
