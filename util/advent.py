@@ -10,6 +10,14 @@ from operator import add, mul
 import sys
 
 
+"""
+1. Copy this file to python path:
+    $ cp advent.py "`python -m site --user-site`"
+2. Import where ever you need it:
+    from advent import *
+"""
+
+
 def lmap(func, *iterables):
     return list(map(func, *iterables))
 

@@ -1,9 +1,14 @@
+#!/usr/bin/python
 import datetime as dt
 import time
 from advent import *
 import requests
 
-# Enter session cookie for adventofcode.com
+"""
+1. Paste session cookie from adventofcode.com into string below.
+2. Create an alias in ~/.zshrc or ~/.bash_profile to `python $HOME/path/to/wait.py`.
+"""
+
 SESSION_COOKIE = ""
 
 URL = lambda y, d: f"https://adventofcode.com/{y}/day/{d}/input"
