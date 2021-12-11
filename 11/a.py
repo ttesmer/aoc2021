@@ -12,24 +12,6 @@ from collections import Counter, deque, defaultdict
 
 from advent import *
 
-#def neighbors(m, i, j, dist=1):
-#    return [row[max(0, j-dist):j+dist+1] for row in m[max(0, i-1):i+dist+1]]
-
-
-# Size of mat
-X = 10
-Y = 10
-
-
-neighbors = lambda x, y : [(x2, y2) for x2 in range(x-1, x+2)
-                               for y2 in range(y-1, y+2)
-                               if (-1 < x < X and
-                                   -1 < y < Y and
-                                   (x != x2 or y != y2) and
-                                   (0 <= x2 < X) and
-                                   (0 <= y2 < Y))]
-
-
 def solve1(o):
     """Part 1."""
 
@@ -48,7 +30,7 @@ def solve1(o):
         while stack:
             (r, c) = stack.pop()
             flashes += 1
-            for (dr, dc) in neighbors(r,c):
+            for (dr, dc) in neighbors((r,c), o):
                 o[dr][dc] += 1
                 if o[dr][dc] == 10:
                     stack.append((dr,dc))
@@ -77,7 +59,7 @@ def solve(o):
         while stack:
             (r, c) = stack.pop()
             flashes += 1
-            for (dr, dc) in neighbors(r,c):
+            for (dr, dc) in neighbors((r,c), o):
                 o[dr][dc] += 1
                 if o[dr][dc] == 10:
                     stack.append((dr,dc))
