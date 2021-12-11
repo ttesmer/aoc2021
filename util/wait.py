@@ -29,7 +29,7 @@ def get_input(day, *kwargs):
             #    print("", words(j), "<= 'words'")
             f.close()
         else:
-            print("\033[91m(ERROR!) Response:", res.status_code, "❌")
+            print("\033[91m(ERROR) Response:", res.status_code, "❌")
 
 
 
