@@ -19,14 +19,14 @@ def get_input(day, *kwargs):
         if res.status_code == 200:
             print("Response:", res.status_code, "✅")
             f.write(res.content)
-            print("\n\033[92mInput dump complete. Good luck!\033[0m")
-            print("*--- INPUT INFO ---* ")
-            print("\nNumber of rows:", len(res.text.strip().split("\n")))
-            print("\nHead of input:")
-            for j in res.text.strip().split("\n")[0:2]:
-                print("\033[96m", j)
-                print("\033[0m", ints(j), "<= 'ints'")
-                print("", words(j), "<= 'words'")
+            #print("\n\033[92mInput dump complete. Good luck!\033[0m")
+            #print("*--- INPUT INFO ---* ")
+            #print("\nNumber of rows:", len(res.text.strip().split("\n")))
+            #print("\nHead of input:")
+            #for j in res.text.strip().split("\n")[0:2]:
+            #    print("\033[96m", j)
+            #    print("\033[0m", ints(j), "<= 'ints'")
+            #    print("", words(j), "<= 'words'")
             f.close()
         else:
             print("\033[91m(ERROR!) Response:", res.status_code, "❌")
