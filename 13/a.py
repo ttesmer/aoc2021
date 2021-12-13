@@ -97,7 +97,7 @@ def solve(o):
     res = 0
     for dim, val in folds:
         arr2 = arr.copy()
-        print(dim, val)
+        print("fold", dim, val)
         val = int(val)
         if dim == "y":
             arr2 = arr2[:val]
@@ -109,7 +109,6 @@ def solve(o):
             arr2 = arr2[val+1:].T
 
         assert arr.shape == arr2.shape
-        print(arr.shape, arr2.shape)
 
         idxs = [(x,y) for y, row in enumerate(arr2) for x, col in enumerate(arr2)]
 
